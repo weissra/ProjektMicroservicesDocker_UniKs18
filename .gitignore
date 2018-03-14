@@ -1,0 +1,63 @@
+
+# Created by https://www.gitignore.io/api/java,eclipse
+
+#archives
+*.7z
+*.zip
+*.rar
+*.jar
+
+#paho lck#
+*.lck
+
+### Java ###
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+### Eclipse ###
+.gradle
+build/
+
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+# Eclipse
+.externalToolBuilders/
+*.launch
+*.pydevproject
+.cproject
+.classpath
+.factorypath
+.buildpath
+.target
+.tern-project
+.texlipse
+.springBeans
+.recommenders/
+.project
+
+!Java_Microservices/lib/*
+!Java_Microservices/gradle/wrapper/*
+
