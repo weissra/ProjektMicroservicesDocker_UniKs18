@@ -5,7 +5,6 @@
 *.7z
 *.zip
 *.rar
-*.jar
 
 #paho lck#
 *.lck
@@ -60,4 +59,4 @@ local.properties
 
 !Java_Microservices/lib/*
 !Java_Microservices/gradle/wrapper/*
-
+!docker/*
