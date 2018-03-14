@@ -1,0 +1,8 @@
+version: v1beta2
+containers:
+- name: goweb
+  image: adg1/goweb
+  ports:
+  - name: http
+    hostPort: 80
+    containerPort: 8080
