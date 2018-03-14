@@ -1,0 +1,9 @@
+1. Installation und erster start:
+docker run -h mysql -e MYSQL_ROOT_PASSWORD=password -e "MYSQL_USER=testuser, test" -p3306:3306 --name mysqldb --network="projektmicroserviceuniks18_ms_network" mysql
+
+2. Spaeteres stoppen der db
+docker stop mysqldb
+
+3. Spaeteres starten der db
+docker start mysqldb
+

@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+   auth:
+      build: ./AuthenticationService
+      image: authenticationimage
+      ports:
+       - 8001:8001 
+      command: -jar AuthenticationService.jar 8001 esregistry:9200
+      
+   number:
+      build: ./NumberService
+      image: numberimage
+      ports:
+       - 8002:8002 
+      command: -jar NumberService.jar 8002 esregistry:9200
+      
+   uppercase:
+      build: ./UppercaseService
+      image: uppercaseimage
+      ports:
+       - 8003:8003 
+      command: -jar UppercaseService.jar esregistry:9200
+      
+   esregistry:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.2.1
+    hostname: esregistry
+    container_name: esregistry
+    environment:
+      - cluster.name=esregistrycluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - esdata1:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+
+volumes:
+  esdata1:
+    driver: local

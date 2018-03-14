@@ -1,0 +1,2 @@
+Manual installation and start of this service
+docker run -h manualauth -p 8001:8001 --name manualauth --network="projektmicroserviceuniks18_ms_network" manualauth -jar AuthenticationService.jar 8001 esregistry:9200

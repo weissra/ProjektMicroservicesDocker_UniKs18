@@ -1,0 +1,1 @@
+docker run -h manualpurger --name manualpurger --network="projektmicroserviceuniks18_ms_network" purger -jar PurgeService.jar -1 esregistry:9200
